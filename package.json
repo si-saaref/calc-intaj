@@ -1,0 +1,9 @@
+{
+  "name": "calc-intaj",
+  "version": "1.0.0",
+  "description": "This website is create to solve any task from my campus",
+  "main": "index.js",
+  "author": "saareff <achmadsyarif241@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
