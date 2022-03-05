@@ -39,6 +39,10 @@ const getPlace4 = () => {
 	return data;
 };
 
+// const displayResult = () => {
+// 	const resultText = document.querySelectorAll('h5.result');
+// };
+
 const submitForm = document.getElementById('formInput');
 submitForm.addEventListener('submit', function SendData(e) {
 	e.preventDefault();

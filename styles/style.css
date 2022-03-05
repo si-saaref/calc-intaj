@@ -4,3 +4,6 @@ table, th, td {
 body {
   background-color: rgb(245, 245, 245);
 }
+input:focus {
+  outline: 2px solid black;
+}
