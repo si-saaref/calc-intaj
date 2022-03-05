@@ -19,6 +19,8 @@ const sendData = (baseInp, inp1, inp2, inp3, inp4) => {
 	console.log(`Result for mauqi 2 : `, totalResult[1]);
 	console.log(`Result for mauqi 3 : `, totalResult[2]);
 	console.log(`Result for mauqi 4 : `, totalResult[3]);
+
+  displayResult(totalResult);
 };
 
 // mufrida rahmayanti

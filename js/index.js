@@ -6,6 +6,7 @@ const getBaseData = () => {
 	});
 	return data;
 };
+
 const getPlace1 = () => {
 	const documentInput = document.querySelectorAll('input.m1Data');
 	const data = [];
@@ -14,6 +15,7 @@ const getPlace1 = () => {
 	});
 	return data;
 };
+
 const getPlace2 = () => {
 	const documentInput = document.querySelectorAll('input.m2Data');
 	const data = [];
@@ -22,6 +24,7 @@ const getPlace2 = () => {
 	});
 	return data;
 };
+
 const getPlace3 = () => {
 	const documentInput = document.querySelectorAll('input.m3Data');
 	const data = [];
@@ -30,6 +33,7 @@ const getPlace3 = () => {
 	});
 	return data;
 };
+
 const getPlace4 = () => {
 	const documentInput = document.querySelectorAll('input.m4Data');
 	const data = [];
@@ -39,9 +43,13 @@ const getPlace4 = () => {
 	return data;
 };
 
-// const displayResult = () => {
-// 	const resultText = document.querySelectorAll('h5.result');
-// };
+const displayResult = (resultData) => {
+	const resultText = document.querySelectorAll('span.resultNumb');
+	resultText.forEach((elem, id) => {
+		console.log(elem);
+		elem.innerHTML = resultData[id];
+	});
+};
 
 const submitForm = document.getElementById('formInput');
 submitForm.addEventListener('submit', function SendData(e) {
