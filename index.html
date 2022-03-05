@@ -2,23 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <title>Calc - Intaj</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <title>Calc - Intaj</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="container mx-auto">
-    <header class="bg-white mb-10 p-4 shadow-md border-b-2 border-slate-300">
-        <nav class="flex justify-between px-10 container">
-            <div class="logo">
-                <a class="text-xl font-semibold tracking-wide text-slate-600" href="">Calc Intaj</a>
-            </div>
-            <div class="flex gap-6 navbar-group">
-                <div class="border-2 border-slate-400 rounded-md px-2 hover:bg-slate-400 hover:text-white duration-200">
-                    <a href="">Muammil Wazn</a href="">
+<body>
+  <div class="max-w-screen-md mx-auto">
+    <header class="fixed left-0 top-0 right-0 w-full bg-white p-4 shadow-md border-b-2 border-slate-300">
+      <nav class="flex justify-between px-10 min-w-full container">
+        <div class="logo">
+          <a class="text-xl font-semibold tracking-wide text-slate-600" href="">Calc Intaj</a>
+        </div>
+        <div class="flex gap-6 navbar-group">
+          <div class="border-2 border-slate-400 rounded-md px-2 hover:bg-slate-400 hover:text-white duration-200">
+            <a href="">Muammil Wazn</a href="">
           </div>
           <div class="border-2 border-slate-400 rounded-md px-2 hover:bg-slate-400 hover:text-white duration-200">
             <a href="">Muammil Aam</a href="">
@@ -26,73 +27,65 @@
         </div>
       </nav>
     </header>
-		<div class="container w-full md:w-full">
-			<form id="formInput">
-				<table class="table-auto w-full">
-					<thead >
-						<tr >
-							<th class="w-8" scope="col">#</th>
-							<th class="w-8" scope="col">Base</th>
-							<th class="w-8" scope="col">M1</th>
-							<th class="w-8" scope="col">M2</th>
-							<th class="w-8" scope="col">M3</th>
-							<th class="w-8" scope="col">M4</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr >
-							<th>1</th>
-							<td ><input class="baseData" /></td>
-							<td ><input class="m1Data" /></td>
-							<td ><input class="m2Data" /></td>
-							<td ><input class="m3Data" /></td>
-							<td ><input class="m4Data" /></td>
-						</tr>
-						<tr >
-							<th>2</th>
-							<td ><input class="baseData" /></td>
-							<td ><input class="m1Data" /></td>
-							<td ><input class="m2Data" /></td>
-							<td ><input class="m3Data" /></td>
-							<td ><input class="m4Data" /></td>
-						</tr>
-						<tr>
-							<th>3</th>
-							<td ><input class="baseData" /></td>
-							<td ><input class="m1Data" /></td>
-							<td ><input class="m2Data" /></td>
-							<td ><input class="m3Data" /></td>
-							<td ><input class="m4Data" /></td>
-						</tr>
-						<tr>
-							<th>4</th>
-							<td ><input class="baseData" /></td>
-							<td ><input class="m1Data" /></td>
-							<td ><input class="m2Data" /></td>
-							<td ><input class="m3Data" /></td>
-							<td ><input class="m4Data" /></td>
-						</tr>
-					</tbody>
-				</table>
-				<!-- <div class="table w-full">
-        <div class="table-header-group">
-          <div class="table-row">
-            <div class="table-cell">1</div>
-            <div class="table-cell">1</div>
-            <div class="table-cell">1</div>
-          </div>
-        </div>
-        <div class="table-row-group">
-          <div class="table-row">
-            <div class="table-cell">1</div>
-          </div>
-        </div>
-      </div> -->
-				<button class="border-4">Submit</button>
-			</form>
-		</div>
-		<script src="./js/index.js"></script>
-		<script src="./js/muamilAam.js"></script>
-		<script src="./js//muamilWazn.js"></script>
-	</body>
+    <main class="bg-white container col-start-3 col-span-8 w-full min-h-screen">
+      <div class="pt-24">
+        <form id="formInput">
+        <table class="table-auto w-full rounded-md">
+          <thead>
+            <tr class="h-14">
+              <th class="w-2" scope="col">#</th>
+              <th class="w-2" scope="col">Base</th>
+              <th class="w-2" scope="col">M1</th>
+              <th class="w-2" scope="col">M2</th>
+              <th class="w-2" scope="col">M3</th>
+              <th class="w-2" scope="col">M4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="h-14">
+              <th>1</th>
+              <td><input class="w-full baseData" /></td>
+              <td><input class="w-full m1Data" /></td>
+              <td><input class="w-full m2Data" /></td>
+              <td><input class="w-full m3Data" /></td>
+              <td><input class="w-full m4Data" /></td>
+            </tr>
+            <tr class="h-14">
+              <th>2</th>
+              <td><input class="w-full baseData" /></td>
+              <td><input class="w-full m1Data" /></td>
+              <td><input class="w-full m2Data" /></td>
+              <td><input class="w-full m3Data" /></td>
+              <td><input class="w-full m4Data" /></td>
+            </tr>
+            <tr class="h-14">
+              <th>3</th>
+              <td><input class="w-full baseData" /></td>
+              <td><input class="w-full m1Data" /></td>
+              <td><input class="w-full m2Data" /></td>
+              <td><input class="w-full m3Data" /></td>
+              <td><input class="w-full m4Data" /></td>
+            </tr>
+            <tr class="h-14">
+              <th>4</th>
+              <td><input class="w-full baseData" /></td>
+              <td><input class="w-full m1Data" /></td>
+              <td><input class="w-full m2Data" /></td>
+              <td><input class="w-full m3Data" /></td>
+              <td><input class="w-full m4Data" /></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="border border-black px-4 py-1 mt-8 rounded-md bg-slate-400 text-white">
+          <p class="text-lg">Submit</p>
+        </button>
+      </form>
+      </div>
+    </main>
+  </div>
+  <script src="./js/index.js"></script>
+  <script src="./js/muamilAam.js"></script>
+  <script src="./js//muamilWazn.js"></script>
+</body>
+
 </html>
