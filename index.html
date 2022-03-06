@@ -12,7 +12,18 @@
 	<body>
 		<div class="max-w-screen-md mx-auto">
 			<header
-				class="fixed z-10 left-0 top-0 right-0 w-full bg-white p-4 shadow-md border-b-2 border-slate-300"
+				class="
+					fixed
+					z-10
+					left-0
+					top-0
+					right-0
+					w-full
+					bg-white
+					p-4
+					shadow-md
+					border-b-2 border-slate-300
+				"
 			>
 				<nav class="flex justify-between px-10 max-w-screen-md mx-auto container">
 					<div class="logo">
@@ -27,7 +38,9 @@
 						<div
 							class="border-2 border-slate-400 rounded-md px-2 hover:bg-slate-400 hover:text-white"
 						>
-							<a href="" onclick="alert('This Page Currently not exist.. please contact your babe')"
+							<a
+								href="#"
+								onclick="alert('This Page Currently not exist.. please contact your babe')"
 								>Muammil Aam</a
 							>
 						</div>
@@ -40,7 +53,7 @@
 						<form id="formInput" class="relative">
 							<table class="table-auto w-full rounded-md">
 								<thead>
-									<tr class="h-8">
+									<tr class="h-8 title-group">
 										<th class="w-2" scope="col">#</th>
 										<th class="w-2" scope="col">الوزن</th>
 										<th class="w-2" scope="col">الموقع الأول</th>
@@ -49,7 +62,7 @@
 										<th class="w-2" scope="col">الموقع الرابع</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody class="data-group">
 									<tr class="h-max-content">
 										<th>1</th>
 										<td><input class="w-full py-3 px-2 text-center baseData" /></td>
@@ -84,6 +97,12 @@
 									</tr>
 								</tbody>
 							</table>
+							<div class="absolute left-0 mt-8">
+								<button class="border-2 border-black px-4 py-1 rounded-md" onclick="addRow(event)">
+									Add Row
+								</button>
+								<button class="border-2 border-black px-4 py-1 rounded-md">Add Column</button>
+							</div>
 							<button
 								class="
 									absolute
@@ -99,6 +118,7 @@
 									hover:bg-white
 									duration-150
 								"
+								id="handleSubmit"
 							>
 								<p class="text-lg">Submit</p>
 							</button>
@@ -119,10 +139,10 @@
 					</div>
 				</div>
 			</main>
-			<footer >
+			<footer>
 				<div class="bg-slate-300 px-4 py-2 shadow-md border-b-2 border-slate-300">
 					<div class="text-center">
-						<h1>Made with love ❤️ from here</h1>
+						<h1>Absolutely made with ❤️</h1>
 					</div>
 				</div>
 			</footer>

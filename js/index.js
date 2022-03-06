@@ -51,8 +51,37 @@ const displayResult = (resultData) => {
 	});
 };
 
-const submitForm = document.getElementById('formInput');
-submitForm.addEventListener('submit', function SendData(e) {
+const createNewRow = (totRow, totCol) => {
+	const newInput = document.createElement('input');
+	newInput.classList.add(`w-full`, `py-3`, `px-2`, `text-center`, `baseData`);
+	const newTd = document.createElement('td');
+	const newTh = document.createElement('th');
+	newTh.innerHTML = totRow + 1;
+	const newTr = document.createElement('tr');
+	newTd.appendChild(newInput);
+	newTr.appendChild(newTh);
+	newTr.appendChild(newTd);
+	for (let i = 1; i < totCol; i++) {
+		const newInput = document.createElement('input');
+		newInput.classList.add(`w-full`, `py-3`, `px-2`, `text-center`, `m${i}Data`);
+		const newTd = document.createElement('td');
+		newTd.appendChild(newInput);
+		newTr.appendChild(newTd);
+		console.log(i);
+	}
+	return newTr;
+};
+
+const addRow = (e) => {
+	e.preventDefault();
+	const rowData = document.querySelector('tbody.data-group');
+	const totalColumn = document.querySelector('tr.title-group').childElementCount - 1;
+	const newRow = createNewRow(rowData.childElementCount, totalColumn);
+	rowData.appendChild(newRow);
+};
+
+const submitForm = document.getElementById('handleSubmit');
+submitForm.addEventListener('click', function SendData(e) {
 	e.preventDefault();
 	const baseDataInput = getBaseData();
 	const place1Input = getPlace1();
