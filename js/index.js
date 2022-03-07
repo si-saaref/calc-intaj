@@ -65,7 +65,8 @@ const createNewRow = (totRow, totCol) => {
 	newTd.appendChild(newInput);
 	newTr.appendChild(newTh);
 	newTr.appendChild(newTd);
-	for (let i = 1; i < totCol; i++) {  
+	newTr.classList.add('h-max-content');
+	for (let i = 1; i < totCol; i++) {
 		const newInput = document.createElement('input');
 		newInput.classList.add(`w-full`, `py-3`, `px-2`, `text-center`, `m${i}Data`);
 		const newTd = document.createElement('td');
@@ -83,35 +84,45 @@ const addRow = (e) => {
 		const newRow = createNewRow(totalRow, totalColumn);
 		rowData.appendChild(newRow);
 	} else {
-    alert('Your maximum muaamil is just 10. Please be considered')
-  }
+		alert('Your maximum muaamil is just 10. Please be considered');
+	}
 };
 
-const arabListNumb = ['الخامس', 'السادس', 'السابع', 'ثامن', 'التاسع', 'العاشر'];
+const arabListNumb = [
+	// 'الثالث',
+	// 'الرابع',
+	'الخامس',
+	'السادس',
+	'السابع',
+	'ثامن',
+	'التاسع',
+	'العاشر',
+];
 const createNewColumn = (totalColumn) => {
 	const newTh = document.createElement('th');
 	newTh.innerText = `الموقع ${arabListNumb[totalColumn - 5]}`;
 	newTh.classList.add('w-2');
 	newTh.setAttribute('scope', 'col');
-	return { newTh };
+	const newTd = document.createElement('td');
+	const newInput = document.createElement('input');
+	newInput.classList.add(`w-full`, `py-3`, `px-2`, `text-center`, `m${totalColumn}Data`);
+	newTd.appendChild(newInput);
+	return { newTh, newTd };
 };
 
 const addColumn = (e) => {
 	e.preventDefault();
 	const { columnDataTitle, columnDataBody, totalColumn } = getDataColAndRow();
 	if (totalColumn <= 10) {
-		const { newTh } = createNewColumn(totalColumn);
+		const { newTh, newTd } = createNewColumn(totalColumn);
 		columnDataTitle.appendChild(newTh);
-		columnDataBody.forEach((newCol) => {
-			const newTd = document.createElement('td');
-			const newInput = document.createElement('input');
-			newInput.classList.add(`w-full`, `py-3`, `px-2`, `text-center`, `m${totalColumn}Data`);
-			newTd.appendChild(newInput);
-			newCol.appendChild(newTd);
+		columnDataBody.forEach((pastColumn) => {
+			console.log(pastColumn);
+			pastColumn.appendChild(newTd.cloneNode(true));
 		});
 	} else {
-    alert('Your maximum الموقع is 10. Please considered');
-  }
+		alert('Your maximum الموقع is 10. Please considered');
+	}
 };
 
 // Display Result
